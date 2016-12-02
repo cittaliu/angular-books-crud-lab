@@ -1,0 +1,32 @@
+.thumbnail {
+    margin-top: 10px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+p {
+    font-size: 12px;
+}
+
+.allpokemon {
+    height: 310px;
+    border: 5px solid black;
+    background-color: #f89b34;
+    border-radius: 15px;
+}
+
+.allpokemon:hover {
+    border: 2px solid white;
+}
+
+.thumbnail-one {
+    height: 270px;
+    background-size: cover;
+    background-position: center;
+}
+
+.pokemon {
+    height: 292px;
+    margin-left: 20px;
+}

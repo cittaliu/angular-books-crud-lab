@@ -1,0 +1,29 @@
+<div class='container'>
+    <div class="list-group-item col-md-3 col-md-offset-2">
+        <div class='col-md-12 thumbnail-one' style="background-image: url({{pokemonShowCtrl.pokemon.image}})">
+        </div>
+    </div>
+
+    <div class="list-group-item col-md-3 pokemon">
+        <h5>
+            <b>Name</b>:<span ng-hide="editing">{{pokemonShowCtrl.pokemon.name}}</span>
+            <input ng-show="editing" ng-model="pokemonShowCtrl.pokemon.name" type="text" class="form-control col-md-2">
+        </h5>
+        <h5>
+            <b>Evolve From</b>:
+            <span ng-hide="editing">{{pokemonShowCtrl.pokemon.evolves_from}}</span>
+            <input ng-show="editing" ng-model="pokemonShowCtrl.pokemon.evolves_from" type="text" class="form-control input-md">
+        </h5>
+        <h5>
+            <b>Pokedex</b>:
+            <span ng-hide="editing">{{pokemonShowCtrl.pokemon.pokedex}}</span>
+            <input ng-show="editing" ng-model="pokemonShowCtrl.pokemon.pokedex" type="text" class="form-control input-md">
+        </h5>
+
+        <button class='btn btn-info' ng-hide="editing" ng-click="editing = true"><span class="glyphicon glyphicon-pencil"></span></button>
+        <button class='btn btn-info' ng-show="editing" ng-click="pokemonShowCtrl.cancelPokemon(); editing = false"><span class="glyphicon glyphicon-remove"></button>
+        <button class='btn btn-success' ng-show="editing" ng-click="pokemonShowCtrl.updatePokemon(pokemonShowCtrl.pokemon); editing = false"><span class="glyphicon glyphicon-ok"></button>
+        <button class='btn btn-danger' ng-click="pokemonShowCtrl.deletePokemon(pokemonShowCtrl.pokemon)"><span class="glyphicon glyphicon-trash"></span></button>
+    </div>
+
+</div>
